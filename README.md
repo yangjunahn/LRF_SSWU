@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Wave Motion Analysis and Bi-LSTM Model
 
 This project analyzes wave and motion data using data visualization and implements a Bi-LSTM model for motion prediction.
@@ -52,3 +53,6 @@ python visualize_data.py
 - **tensorflow**: Deep learning framework for Bi-LSTM
 - **scikit-learn, scipy**: Machine learning utilities
 - **jupyter**: Interactive development (optional) 
+=======
+# LRF_SSWU
+>>>>>>> fe1442a65d5bb646c1324ba1f704e139563eedfd
