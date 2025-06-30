@@ -186,7 +186,7 @@ def evaluate_model(model, test_loader, label_encoder):
     
     return accuracy, report, all_predictions, all_labels, all_probabilities
 
-def plot_training_history(train_losses, val_losses, train_accuracies, val_accuracies, save_path='training_history_cnn.png'):
+def plot_training_history(train_losses, val_losses, train_accuracies, val_accuracies, save_path='results/training_history_cnn.png'):
     """Plot training history for CNN"""
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 5))
     
@@ -213,7 +213,7 @@ def plot_training_history(train_losses, val_losses, train_accuracies, val_accura
     plt.close()
     print(f"Training history saved to {save_path}")
 
-def compare_models(bilstm_results, cnn_results, save_path='model_comparison.png'):
+def compare_models(bilstm_results, cnn_results, save_path='results/model_comparison.png'):
     """Compare Bi-LSTM and CNN model performances"""
     
     # Extract accuracies
@@ -335,8 +335,8 @@ def main():
     plot_training_history(train_losses, val_losses, train_accuracies, val_accuracies)
     
     # Save model
-    torch.save(model.state_dict(), 'time_cnn_model.pth')
-    print("Time-CNN model saved to time_cnn_model.pth")
+    torch.save(model.state_dict(), 'results/time_cnn_model.pth')
+    print("Time-CNN model saved to results/time_cnn_model.pth")
     
     # Save results
     cnn_results = {
@@ -356,12 +356,12 @@ def main():
         }
     }
     
-    with open('cnn_model_results.json', 'w') as f:
+    with open('results/cnn_model_results.json', 'w') as f:
         json.dump(cnn_results, f, indent=2)
     
     # Load Bi-LSTM results for comparison
     try:
-        with open('model_results_pytorch.json', 'r') as f:
+        with open('results/model_results_pytorch.json', 'r') as f:
             bilstm_results = json.load(f)
         
         # Compare models
@@ -382,9 +382,9 @@ def main():
     print("TIME-CNN TRAINING COMPLETED")
     print("="*50)
     print(f"Test Accuracy: {accuracy:.4f}")
-    print(f"Model saved as: time_cnn_model.pth")
-    print(f"Results saved as: cnn_model_results.json")
-    print(f"Plots saved as: training_history_cnn.png")
+    print(f"Model saved as: results/time_cnn_model.pth")
+    print(f"Results saved as: results/cnn_model_results.json")
+    print(f"Plots saved as: results/training_history_cnn.png")
     print("="*50)
 
 if __name__ == "__main__":

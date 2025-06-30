@@ -125,15 +125,21 @@ LRF_SSWU/
 │   ├── y_train.npy            # Training labels
 │   ├── y_test.npy             # Test labels
 │   └── label_encoder.pkl      # Label encoder
+├── results/                    # All result files (models, plots, logs, metrics)
+│   ├── bilstm_model_pytorch.pth
+│   ├── time_cnn_model.pth
+│   ├── model_results_pytorch.json
+│   ├── cnn_model_results.json
+│   ├── model_comparison.png
+│   ├── training_history_pytorch.png
+│   ├── training_history_cnn.png
+│   ├── wave_motion_plot.png
+│   └── ... (other result files)
 ├── create_training_database.py # Data preprocessing script
 ├── bilstm_model_pytorch.py    # Bi-LSTM model implementation
 ├── time_cnn_model.py          # Time-CNN model implementation
 ├── visualize_data.py          # Data visualization script
 ├── load_training_data.py      # Data loading utilities
-├── bilstm_model_pytorch.pth   # Trained Bi-LSTM model
-├── time_cnn_model.pth         # Trained Time-CNN model
-├── model_comparison.png       # Model performance comparison
-├── training_history_*.png     # Training curves
 ├── requirements.txt           # Python dependencies
 └── README.md                  # This file
 ```
@@ -169,13 +175,13 @@ python load_training_data.py
 
 ## 📊 Generated Outputs
 
-- **Trained Models**: `bilstm_model_pytorch.pth`, `time_cnn_model.pth`
-- **Results**: `model_results_pytorch.json`, `cnn_model_results.json`
+- **Trained Models**: `results/bilstm_model_pytorch.pth`, `results/time_cnn_model.pth`
+- **Results**: `results/model_results_pytorch.json`, `results/cnn_model_results.json`
 - **Visualizations**: 
-  - `wave_motion_plot.png` - Original data visualization
-  - `training_history_pytorch.png` - Bi-LSTM training curves
-  - `training_history_cnn.png` - Time-CNN training curves
-  - `model_comparison.png` - Performance comparison
+  - `results/wave_motion_plot.png` - Original data visualization
+  - `results/training_history_pytorch.png` - Bi-LSTM training curves
+  - `results/training_history_cnn.png` - Time-CNN training curves
+  - `results/model_comparison.png` - Performance comparison
 
 ## 🔧 Dependencies
 

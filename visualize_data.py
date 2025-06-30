@@ -66,8 +66,8 @@ axes[-1].set_xlabel('Time (sec)')
 plt.tight_layout()
 
 # Save the plot instead of showing it
-plt.savefig('wave_motion_plot.png', dpi=300, bbox_inches='tight')
-print("Plot saved as 'wave_motion_plot.png'")
+plt.savefig('results/wave_motion_plot.png', dpi=300, bbox_inches='tight')
+print("Plot saved as 'results/wave_motion_plot.png'")
 
 # Close the figure to free memory
 plt.close() 

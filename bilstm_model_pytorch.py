@@ -189,13 +189,13 @@ def main():
     plt.ylabel('Loss')
     plt.legend()
     plt.grid(True)
-    plt.savefig('training_history_pytorch.png', dpi=300, bbox_inches='tight')
+    plt.savefig('results/training_history_pytorch.png', dpi=300, bbox_inches='tight')
     plt.close()
-    print("Training history saved to training_history_pytorch.png")
+    print("Training history saved to results/training_history_pytorch.png")
     
     # Save model
-    torch.save(model.state_dict(), 'bilstm_model_pytorch.pth')
-    print("Model saved to bilstm_model_pytorch.pth")
+    torch.save(model.state_dict(), 'results/bilstm_model_pytorch.pth')
+    print("Model saved to results/bilstm_model_pytorch.pth")
     
     # Save results
     results = {
@@ -209,16 +209,16 @@ def main():
         }
     }
     
-    with open('model_results_pytorch.json', 'w') as f:
+    with open('results/model_results_pytorch.json', 'w') as f:
         json.dump(results, f, indent=2)
     
     print("\n" + "="*50)
     print("TRAINING COMPLETED")
     print("="*50)
     print(f"Test Accuracy: {accuracy:.4f}")
-    print(f"Model saved as: bilstm_model_pytorch.pth")
-    print(f"Results saved as: model_results_pytorch.json")
-    print(f"Plot saved as: training_history_pytorch.png")
+    print(f"Model saved as: results/bilstm_model_pytorch.pth")
+    print(f"Results saved as: results/model_results_pytorch.json")
+    print(f"Plot saved as: results/training_history_pytorch.png")
     print("="*50)
 
 if __name__ == "__main__":
