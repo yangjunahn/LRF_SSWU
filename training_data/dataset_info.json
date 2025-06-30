@@ -1,0 +1,20 @@
+{
+  "total_samples": 17991,
+  "train_samples": 14392,
+  "test_samples": 3599,
+  "n_features": 42,
+  "n_categories": 9,
+  "window_size": 100,
+  "overlap": 0.5,
+  "categories": [
+    "180_Tm_9.5_HS_3.5",
+    "180_Tm_7.5_HS_3.5",
+    "135_Tm_11.5_HS_3.5",
+    "180_Tm_11.5_HS_3.5",
+    "090_Tm_11.5_HS_3.5",
+    "135_Tm_9.5_HS_3.5",
+    "090_Tm_9.5_HS_3.5",
+    "135_Tm_7.5_HS_3.5",
+    "090_Tm_7.5_HS_3.5"
+  ]
+}
